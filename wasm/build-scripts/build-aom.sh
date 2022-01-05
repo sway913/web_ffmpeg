@@ -29,7 +29,9 @@ emmake cmake .. \
   -DAOM_EXTRA_C_FLAGS="$CFLAGS" \
   -DAOM_EXTRA_CXX_FLAGS="$CFLAGS" \
   ${CM_FLAGS[@]}
-emmake make clean
+
+#emmake make clean
+
 emmake make install -j
 
 cd $ROOT_DIR

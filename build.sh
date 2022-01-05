@@ -4,6 +4,8 @@ set -eo pipefail
 
 SCRIPT_ROOT=$(dirname $0)/wasm/build-scripts
 
+source /home/ztz/work/emsdk/emsdk_env.sh
+
 run() {
   for name in $@; do
     $SCRIPT_ROOT/$name.sh
@@ -13,7 +15,7 @@ run() {
 run-all() {
   SCRIPTS=(
     # install dependencies
-    install-deps
+    #install-deps
     build-zlib
     build-x264
     build-x265

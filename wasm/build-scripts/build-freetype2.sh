@@ -14,7 +14,7 @@ echo "CONF_FLAGS=${CONF_FLAGS[@]}"
 (cd $LIB_PATH && \
   emconfigure ./autogen.sh && \
   emconfigure ./configure "${CONF_FLAGS[@]}")
-emmake make -C $LIB_PATH clean
+#emmake make -C $LIB_PATH clean
 # build apinames manually to prevent it built by emcc
 gcc -o third_party/freetype2/objs/apinames third_party/freetype2/src/tools/apinames.c
 emmake make -C $LIB_PATH install -j
